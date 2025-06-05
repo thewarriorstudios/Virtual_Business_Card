@@ -1,5 +1,8 @@
+/* Google Font for Signature-like Script */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 body {
-  background-color: #000;
+  background: linear-gradient(to bottom, #FFD700, #FFA500, #FFE5B4); /* Sunshine style gradient */
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
   display: flex;
@@ -19,6 +22,7 @@ body {
   text-align: center;
   box-shadow: 0 0 30px rgba(0, 255, 127, 0.2);
   backdrop-filter: blur(12px);
+  position: relative;
 }
 
 .brand {
@@ -62,6 +66,14 @@ body {
 .qr-box p {
   margin-top: 0.5rem;
   color: #fff;
+}
+
+.signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-top: 2rem;
+  text-align: center;
 }
 
 footer {
