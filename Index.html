@@ -4,145 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mercedes | Fitoterapia Campos USA</title>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Segoe+UI&display=swap" rel="stylesheet">
+
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    /* Base Styles */
-    body {
-      background: linear-gradient(-45deg, #FFD700, #FFA500, #FFE5B4, #FF6E7F, #8A2BE2);
-      background-size: 400% 400%;
-      animation: gradientShift 15s ease infinite;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
 
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 2rem;
-    }
-
-    .card-container {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid #333;
-      border-radius: 16px;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 0 30px rgba(0, 255, 127, 0.2);
-      backdrop-filter: blur(12px);
-      margin-bottom: 2rem;
-    }
-
-    .brand {
-      font-size: 2.8rem;
-      color: #00ffcc;
-      margin-bottom: 0.3rem;
-      letter-spacing: 1px;
-    }
-
-    .subtitle {
-      font-size: 1rem;
-      font-style: italic;
-      color: #ddd;
-      margin-bottom: 1.2rem;
-    }
-
-    .contact a {
-      color: #00ffcc;
-      text-decoration: none;
-    }
-
-    .qrs {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .qr-box {
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .qr-box:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-    }
-
-    .qr-box img {
-      width: 150px;
-      height: 150px;
-      border: 2px solid #00ffcc;
-      border-radius: 12px;
-      padding: 6px;
-    }
-
-    .qr-box p {
-      margin-top: 0.5rem;
-      color: #fff;
-    }
-
-    .signature {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2.2rem;
-      color: #ffffff;
-      margin-top: 2rem;
-      text-align: center;
-    }
-
-    footer {
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      color: #aaa;
-      text-align: center;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-      object-fit: cover;
-    }
-
-    .language-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background: rgba(0, 0, 0, 0.5);
-      border: none;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      z-index: 1000;
-    }
-
-    @media (max-width: 480px) {
-      .qr-box img {
-        width: 120px;
-        height: 120px;
-      }
-    }
-  </style>
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Language Switch -->
   <button class="language-toggle" onclick="toggleLanguage()">ES</button>
+
   <div class="container">
     <div class="card-container" data-aos="fade-up">
       <header>
@@ -151,8 +26,12 @@
       </header>
 
       <section class="contact">
-        <p data-en="Email:" data-es="Correo electrónico:">Email: <a href="mailto:daymery33333@gmail.com">daymery33333@gmail.com</a></p>
-        <p data-en="Phone:" data-es="Teléfono:">Phone: <a href="tel:+14707674127">470-767-4127</a></p>
+        <p data-en="Email:" data-es="Correo electrónico:">
+          Email: <a href="mailto:daymery33333@gmail.com">daymery33333@gmail.com</a>
+        </p>
+        <p data-en="Phone:" data-es="Teléfono:">
+          Phone: <a href="tel:+14707674127">470-767-4127</a>
+        </p>
       </section>
 
       <section class="qrs">
@@ -169,20 +48,29 @@
       <div class="signature" data-en="Mercedes" data-es="Mercedes">Mercedes</div>
 
       <footer>
-        <p data-en="© 2025 Mercedes — Rooted in Nature, Guided by Wisdom" data-es="© 2025 Mercedes — Arraigada en la Naturaleza, Guiada por la Sabiduría">© 2025 Mercedes — Rooted in Nature, Guided by Wisdom</p>
+        <p data-en="© 2025 Mercedes — Rooted in Nature, Guided by Wisdom"
+           data-es="© 2025 Mercedes — Arraigada en la Naturaleza, Guiada por la Sabiduría">
+           © 2025 Mercedes — Rooted in Nature, Guided by Wisdom
+        </p>
       </footer>
     </div>
 
-    <!-- Image Gallery -->
+    <!-- Gallery Section -->
     <section class="gallery" data-aos="fade-up">
-      <img src="https://www.pexels.com/photo/garlic-bulbs-on-brown-wooden-surface-1300975/" alt="Garlic Bulbs">
-      <img src="https://www.pexels.com/photo/assorted-herbs-and-spices-on-wooden-board-1640777/" alt="Herbs and Spices">
-      <img src="https://www.pexels.com/photo/variety-of-herbs-and-spices-on-wooden-table-1640776/" alt="Natural Remedies">
-      <!-- Add more images as needed -->
+      <img src="https://images.pexels.com/photos/1300975/pexels-photo-1300975.jpeg" alt="Garlic Bulbs">
+      <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Herbs and Spices">
+      <img src="https://images.pexels.com/photos/1640776/pexels-photo-1640776.jpeg" alt="Natural Remedies">
     </section>
+
+    <!-- GitHub App Integration Button -->
+    <div class="github-app" data-aos="fade-up">
+      <a href="https://github.com/apps/mercedes-vcard-integration" target="_blank" class="github-button">
+        🚀 GitHub App: Mercedes VCard
+      </a>
+    </div>
   </div>
 
-  <!-- AOS Animation Library -->
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
@@ -198,6 +86,9 @@
         el.textContent = el.getAttribute(`data-${newLang}`);
       });
     }
+
+    // Default to English on load
+    document.documentElement.lang = "en";
   </script>
 </body>
 </html>
