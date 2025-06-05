@@ -11,8 +11,8 @@
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Styles (make sure styles.css is in the same 'docs' folder) -->
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <!-- Language Switch -->
@@ -70,7 +70,7 @@
     </div>
   </div>
 
-  <!-- Scripts -->
+  <!-- AOS Library Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
@@ -80,15 +80,14 @@
       const currentLang = document.documentElement.lang;
       const newLang = currentLang === 'en' ? 'es' : 'en';
       document.documentElement.lang = newLang;
-      document.querySelector('.language-toggle').textContent = newLang.toUpperCase() === 'EN' ? 'ES' : 'EN';
+      document.querySelector('.language-toggle').textContent = newLang === 'en' ? 'ES' : 'EN';
 
       elements.forEach(el => {
         el.textContent = el.getAttribute(`data-${newLang}`);
       });
     }
 
-    // Default to English on load
-    document.documentElement.lang = "en";
+    document.documentElement.lang = "en"; // Default language
   </script>
 </body>
 </html>
