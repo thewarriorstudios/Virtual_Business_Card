@@ -1,15 +1,24 @@
-/* Google Font for Signature-like Script */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
+/* Base Styles */
 body {
-  background: linear-gradient(to bottom, #FFD700, #FFA500, #FFE5B4); /* Sunshine style gradient */
+  background: linear-gradient(-45deg, #FFD700, #FFA500, #FFE5B4, #FF6E7F, #8A2BE2);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
   margin: 0;
+  padding: 0;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
 }
 
 .card-container {
@@ -17,24 +26,23 @@ body {
   border: 1px solid #333;
   border-radius: 16px;
   padding: 2rem;
-  max-width: 600px;
-  width: 90%;
   text-align: center;
   box-shadow: 0 0 30px rgba(0, 255, 127, 0.2);
   backdrop-filter: blur(12px);
-  position: relative;
+  margin-bottom: 2rem;
 }
 
 .brand {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #00ffcc;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: 1px;
 }
 
 .subtitle {
   font-size: 1rem;
   font-style: italic;
-  color: #ccc;
+  color: #ddd;
   margin-bottom: 1.2rem;
 }
 
@@ -45,14 +53,20 @@ body {
 
 .qrs {
   display: flex;
-  justify-content: space-around;
-  margin-top: 2rem;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .qr-box {
   text-align: center;
-  margin: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qr-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
 }
 
 .qr-box img {
@@ -70,7 +84,7 @@ body {
 
 .signature {
   font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #ffffff;
   margin-top: 2rem;
   text-align: center;
@@ -80,4 +94,73 @@ footer {
   margin-top: 2rem;
   font-size: 0.8rem;
   color: #aaa;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.language-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+@media (max-width: 480px) {
+  .qr-box img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* GitHub App Section */
+.github-app {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Pulse Glow Animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px 0 rgba(0, 255, 204, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px 6px rgba(0, 255, 204, 0.9);
+  }
+}
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  background-color: #24292e;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  animation: pulseGlow 2.5s ease-in-out infinite;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.github-button:hover {
+  background-color: #1db954; /* fresh green */
+  box-shadow: 0 0 25px 10px rgba(29, 185, 84, 0.9);
 }
